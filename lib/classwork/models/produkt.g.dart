@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'product.dart';
+part of 'produkt.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Product _$ProductFromJson(Map<String, dynamic> json) => Product(
+Produkt _$ProduktFromJson(Map<String, dynamic> json) => Produkt(
       id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       price: json['price'] as num,
@@ -16,7 +16,7 @@ Product _$ProductFromJson(Map<String, dynamic> json) => Product(
       rating: json['rating'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{
+Map<String, dynamic> _$ProduktToJson(Produkt instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'price': instance.price,
