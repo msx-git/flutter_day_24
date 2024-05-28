@@ -1,8 +1,18 @@
-import 'package:flutter_day_24/homework/models/location.dart';
+import 'package:flutter_day_24/homework/models/employee.dart';
+import 'package:flutter_day_24/homework/models/lokeshin.dart';
+import 'package:flutter_day_24/homework/models/product.dart';
 
 import '../models/company.dart';
 
 class CompanyController {
+  CompanyController._();
+
+  static final CompanyController _companyController = CompanyController._();
+
+  factory CompanyController() {
+    return _companyController;
+  }
+
   final List<Company> _list = [
     Company(
       name: "Tech Solutions",
@@ -11,7 +21,13 @@ class CompanyController {
         city: 'London',
         country: 'England',
       ),
-      employees: [],
+      employees: [
+        Employee(
+            name: 'Alice',
+            age: 30,
+            position: 'Developer',
+            skills: ['Dart', 'Flutter', 'Firebase'])
+      ],
       products: [],
     ),
   ];
@@ -31,5 +47,13 @@ class CompanyController {
       products: [],
     );
     _list.add(newCompany);
+  }
+
+  void deleteEmployee({required int companyIndex, required int employeeIndex}) {
+    _list[companyIndex].employees.removeAt(employeeIndex);
+  }
+
+  void addProduct({required int companyIndex, required Product product}) {
+    _list[companyIndex].products.add(product);
   }
 }

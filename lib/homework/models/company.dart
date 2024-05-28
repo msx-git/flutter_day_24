@@ -1,5 +1,5 @@
 import 'employee.dart';
-import 'location.dart';
+import 'lokeshin.dart';
 import 'product.dart';
 
 class Company {
